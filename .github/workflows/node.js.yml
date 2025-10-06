@@ -33,7 +33,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build -- --base-href=/capn/
+    - run: npm run build -- --base-href='/capn/'
+           
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
       with:
