@@ -24,7 +24,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
   ];
 
   return (
-    <header className="bg-gradient-to-r from-slate-800 to-slate-900 text-white shadow-lg sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-pink-800 to-pink-900 text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => onNavigate('home')}>
