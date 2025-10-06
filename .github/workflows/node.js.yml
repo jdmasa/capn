@@ -8,7 +8,11 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+permissions:
+  pages: write      # Required for Pages deployment
+  id-token: write   # Required for verification
+  contents: read    # Required for repository access
+  
 jobs:
   build:
 
