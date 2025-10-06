@@ -63,7 +63,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('ca')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'ca' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700 hover:bg-pink-600'
+                  language === 'ca' ? 'bg-amber-500 text-slate-900' : 'bg-pink-700 hover:bg-pink-600'
                 }`}
               >
                 CAT
@@ -71,7 +71,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('es')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'es' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700 hover:bg-pink-600'
+                  language === 'es' ? 'bg-amber-500 text-slate-900' : 'bg-pink-700 hover:bg-pink-600'
                 }`}
               >
                 ESP
@@ -124,7 +124,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('ca')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'ca' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700'
+                  language === 'ca' ? 'bg-amber-500 text-slate-900' : 'bg-pink-700'
                 }`}
               >
                 CAT
@@ -132,7 +132,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('es')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'es' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700'
+                  language === 'es' ? 'bg-amber-500 text-slate-900' : 'bg-pink-700'
                 }`}
               >
                 ESP
