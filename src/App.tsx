@@ -33,7 +33,7 @@ function App() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          <main className="flex-1 order-2 lg:order-1">
+          <main className="flex-1 order-1 lg:order-1">
             {activeSection === 'home' ? (
               <div className="space-y-8">
                 <section className="bg-white rounded-xl shadow-lg p-8">
@@ -52,7 +52,7 @@ function App() {
             )}
           </main>
 
-          <aside className="lg:w-80 order-1 lg:order-2">
+          <aside className="lg:w-80 order-2 lg:order-2">
             <Sidebar language={language} onNavigate={handleNavigate} />
           </aside>
         </div>
