@@ -45,12 +45,12 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
                   {item.label}
                 </button>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="absolute left-0 mt-2 w-48 bg-pink-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     {item.submenu.map((subitem) => (
                       <button
                         key={subitem.id}
                         onClick={() => onNavigate(subitem.id)}
-                        className="block w-full text-left px-4 py-2 hover:bg-slate-700 hover:text-amber-400 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                        className="block w-full text-left px-4 py-2 hover:bg-pink-700 hover:text-amber-400 transition-colors first:rounded-t-lg last:rounded-b-lg"
                       >
                         {subitem.label}
                       </button>
@@ -59,11 +59,11 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
                 )}
               </div>
             ))}
-            <div className="flex space-x-2 ml-4 border-l border-slate-600 pl-4">
+            <div className="flex space-x-2 ml-4 border-l border-pink-600 pl-4">
               <button
                 onClick={() => onLanguageChange('ca')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'ca' ? 'bg-amber-500 text-slate-900' : 'bg-slate-700 hover:bg-slate-600'
+                  language === 'ca' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700 hover:bg-pink-600'
                 }`}
               >
                 CAT
@@ -71,7 +71,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('es')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'es' ? 'bg-amber-500 text-slate-900' : 'bg-slate-700 hover:bg-slate-600'
+                  language === 'es' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700 hover:bg-pink-600'
                 }`}
               >
                 ESP
