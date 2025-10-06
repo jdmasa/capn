@@ -14,8 +14,10 @@ permissions:
   contents: read    # Required for repository access
   
 jobs:
+  
   build:
-
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
 
     strategy:
