@@ -183,7 +183,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 bg-gradient-to-br from-pink-50 to-purple-100 p-6 rounded-lg hover:shadow-lg transition-all"
                 >
-                  <Instagram className="text-pink-600" size={48} />
+                  <Instagram className="text-slate-600" size={48} />
                   <div>
                     <h3 className="font-bold text-slate-800">Instagram</h3>
                     <p className="text-sm text-slate-600">@arquerspoblenou</p>
