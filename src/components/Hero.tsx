@@ -26,7 +26,7 @@ export default function Hero({ language, onNavigate }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => onNavigate('courses')}
-              className="bg-amber-500 hover:bg-amber-600 text-pink-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+              className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
             >
               <span>{language === 'ca' ? 'Veure Cursos' : 'Ver Cursos'}</span>
               <ArrowRight size={20} />
