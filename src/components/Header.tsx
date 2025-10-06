@@ -111,7 +111,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
                           onNavigate(subitem.id);
                           setMobileMenuOpen(false);
                         }}
-                        className="block w-full text-left py-1 text-slate-300 hover:text-amber-400 transition-colors"
+                        className="block w-full text-left py-1 text-pink-300 hover:text-amber-400 transition-colors"
                       >
                         {subitem.label}
                       </button>
@@ -120,11 +120,11 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
                 )}
               </div>
             ))}
-            <div className="flex space-x-2 pt-2 border-t border-slate-700">
+            <div className="flex space-x-2 pt-2 border-t border-pink-700">
               <button
                 onClick={() => onLanguageChange('ca')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'ca' ? 'bg-amber-500 text-slate-900' : 'bg-slate-700'
+                  language === 'ca' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700'
                 }`}
               >
                 CAT
@@ -132,7 +132,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
               <button
                 onClick={() => onLanguageChange('es')}
                 className={`px-3 py-1 rounded transition-colors ${
-                  language === 'es' ? 'bg-amber-500 text-slate-900' : 'bg-slate-700'
+                  language === 'es' ? 'bg-amber-500 text-pink-900' : 'bg-pink-700'
                 }`}
               >
                 ESP
