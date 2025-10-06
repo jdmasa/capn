@@ -111,7 +111,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
                           onNavigate(subitem.id);
                           setMobileMenuOpen(false);
                         }}
-                        className="block w-full text-left py-1 text-pink-300 hover:text-amber-400 transition-colors"
+                        className="block w-full text-left py-1 text-slate-300 hover:text-amber-400 transition-colors"
                       >
                         {subitem.label}
                       </button>
