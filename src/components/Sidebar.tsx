@@ -35,11 +35,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
 
   return (
     <aside className="space-y-6">
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-4">
-        </div>
-        
-      </div>
+      
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-pink-700 to-pink-800 p-4">
