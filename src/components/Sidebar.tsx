@@ -38,31 +38,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-4">
         </div>
-        <div className="p-4">
-          <div className="text-center mb-4">
-            <div className="text-3xl font-bold text-slate-800">{language === 'ca' ? 'Octubre' : 'Octubre'}</div>
-            <div className="text-5xl font-bold text-amber-600">2025</div>
-          </div>
-          <div className="grid grid-cols-7 gap-1 text-center text-sm">
-            {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => (
-              <div key={i} className="font-semibold text-slate-600">{day}</div>
-            ))}
-            {[...Array(31)].map((_, i) => {
-              const day = i + 1;
-              const isActivity = [12, 18, 25].includes(day);
-              return (
-                <div
-                  key={i}
-                  className={`py-1 rounded ${
-                    isActivity ? 'bg-amber-500 text-white font-bold' : 'text-slate-700'
-                  }`}
-                >
-                  {day}
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        
       </div>
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
