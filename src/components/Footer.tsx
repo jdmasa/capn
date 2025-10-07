@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Target, Mail, Phone, MapPin } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 
