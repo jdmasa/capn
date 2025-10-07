@@ -2,6 +2,7 @@ import { Target, Menu, X } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 import { useState } from 'react';
+import logoUrl from './capn.svg'
 
 interface HeaderProps {
   language: Language;
