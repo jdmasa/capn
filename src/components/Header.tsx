@@ -29,7 +29,7 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => onNavigate('home')}>
 
-            <img src="capn.svg" alt="CAPN Logo"/>
+            <img src="capn.svg" alt="CAPN Logo" style="width: 75px; height: auto;"/>
             <div>
               <h1 className="text-2xl font-bold">{t('clubName', language)}</h1>
               <p className="text-xs text-slate-300">Barcelona</p>
