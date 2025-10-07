@@ -47,7 +47,7 @@ export default function Hero({ language, onNavigate }: HeroProps) {
           {[...images, ...images].map((img, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-64 h-full -ml-10 first:ml-0"
+              className="flex-shrink-0 w-64 h-full -ml-12 first:ml-0"
               style={{
                 clipPath: 'polygon(25% 0%, 100% 0, 75% 100%, 0% 100%)',
               }}
