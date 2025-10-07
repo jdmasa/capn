@@ -12,7 +12,7 @@ export default function Hero({ language, onNavigate }: HeroProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    'https://images.pexels.com/photos/6256068/pexels-photo-6256068.jpeg?auto=compress&cs=tinysrgb&w=800',
+    '001.jpg',
     'https://images.pexels.com/photos/6256065/pexels-photo-6256065.jpeg?auto=compress&cs=tinysrgb&w=800',
     'https://images.pexels.com/photos/6256281/pexels-photo-6256281.jpeg?auto=compress&cs=tinysrgb&w=800',
     'https://images.pexels.com/photos/6256297/pexels-photo-6256297.jpeg?auto=compress&cs=tinysrgb&w=800',
