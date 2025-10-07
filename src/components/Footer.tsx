@@ -15,7 +15,7 @@ export default function Footer({ language, onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img src="capn.svg" alt="CAPN Logo"/>
+              <img src={capnLogo} alt="CAPN Logo" className="w-[50px]" />
               <h3 className="text-xl font-bold">{t('clubName', language)}</h3>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
