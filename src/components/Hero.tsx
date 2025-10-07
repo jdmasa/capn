@@ -49,7 +49,7 @@ export default function Hero({ language, onNavigate }: HeroProps) {
               key={index}
               className="flex-shrink-0 w-64 h-full"
               style={{
-                clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                clipPath: 'polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)',
               }}
             >
               <img
