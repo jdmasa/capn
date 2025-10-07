@@ -2,6 +2,7 @@ import { Target, Menu, X } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 import { useState } from 'react';
+import logo from './capn.svg';
 
 interface HeaderProps {
   language: Language;
@@ -28,7 +29,8 @@ export default function Header({ language, onLanguageChange, onNavigate }: Heade
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => onNavigate('home')}>
-            <Target className="h-10 w-10 text-amber-500" strokeWidth={2.5} />
+
+            <img src={logo} alt="CAPN Logo" />;
             <div>
               <h1 className="text-2xl font-bold">{t('clubName', language)}</h1>
               <p className="text-xs text-slate-300">Barcelona</p>
