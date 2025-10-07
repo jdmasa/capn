@@ -1,4 +1,4 @@
-import { Target, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 
@@ -14,7 +14,7 @@ export default function Footer({ language, onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <Target className="h-8 w-8 text-amber-500" strokeWidth={2.5} />
+              <img src="capn.svg" alt="CAPN Logo" style="height: 75px;"/>
               <h3 className="text-xl font-bold">{t('clubName', language)}</h3>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
