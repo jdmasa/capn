@@ -43,7 +43,7 @@ export default function Hero({ language, onNavigate }: HeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-pink-800 to-amber-900 text-white py-24 overflow-hidden">
       <div className="absolute inset-0 opacity-30">
-        <div ref={scrollRef} className="flex gap-6 h-full overflow-hidden">
+        <div ref={scrollRef} className="flex gap-2 h-full overflow-hidden">
           {[...images, ...images].map((img, index) => (
             <div
               key={index}
