@@ -1,4 +1,4 @@
-import { Calendar, Activity, ExternalLink } from 'lucide-react';
+import { Activity, ExternalLink } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 
@@ -37,10 +37,6 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
     <aside className="space-y-6">
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-4">
-          <h3 className="text-white font-bold text-lg flex items-center">
-            <Calendar className="mr-2" size={20} />
-            {t('calendar', language)}
-          </h3>
         </div>
         <div className="p-4">
           <div className="text-center mb-4">
