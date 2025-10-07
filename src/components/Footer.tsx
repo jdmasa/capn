@@ -1,6 +1,7 @@
 import { Target, Mail, Phone, MapPin } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
+import capnLogo from '/capn.svg';
 
 interface FooterProps {
   language: Language;
