@@ -13,11 +13,14 @@ export default function Hero({ language, onNavigate }: HeroProps) {
 
   const images = [
     '001.jpg',
-    'https://images.pexels.com/photos/6256065/pexels-photo-6256065.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/6256281/pexels-photo-6256281.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/6256297/pexels-photo-6256297.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/6256291/pexels-photo-6256291.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/6256073/pexels-photo-6256073.jpeg?auto=compress&cs=tinysrgb&w=800'
+    '002.jpg',
+    '003.jpg',
+    '004.jpg',
+    '005.jpg',
+    '006.jpg',
+    '007.jpg',
+    '008.jpg',
+    '009.jpg',
   ];
 
   useEffect(() => {
