@@ -11,12 +11,14 @@ export interface FetchCSVDataProps {
   csvUrl?: string;
   onDataFetch?: (data: CSVRow[]) => void;
   onError?: (error: Error) => void;
+  language: Language;
 }
 
 export default function FetchCSVData({
   csvUrl = 'YOUR_GOOGLE_SHEETS_CSV_URL_HERE',
   onDataFetch,
-  onError
+  onError,
+  language
 }: FetchCSVDataProps) {
   const [csvData, setCsvData] = useState<CSVRow[]>([]);
 
