@@ -56,18 +56,12 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
           </h3>
         </div>
         <div className="p-4 space-y-4 max-h-80 overflow-y-auto">
-          {activities.map((activity, index) => (
-            <div key={index} className="border-l-4 border-amber-500 pl-3 py-2 hover:bg-pink-50 transition-colors">
-              <div className="text-xs text-slate-500 font-semibold">
-                {new Date(activity.date).toLocaleDateString(language === 'ca' ? 'ca-ES' : 'es-ES', {
-                  day: 'numeric',
-                  month: 'long'
-                })}
-              </div>
-              <div className="font-bold text-slate-800">{activity.title[language]}</div>
-              <div className="text-sm text-slate-600">{activity.description[language]}</div>
-            </div>
-          ))}
+          <FetchCSVData 
+      csvUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe-ieEPbOt3N_kkLsZOjJJdr_uCJwe5Y74pZgQjwG39TJThxzU4lDMdx5vornMBaRK0VAEGGRwHekj/pub?gid=0&single=true&output=csv"
+      onDataFetch={handleDataFetch}
+      onError={handleError}
+         maxRedirects={5}
+    />
         </div>
       </div>
 
@@ -90,12 +84,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
           ))}
         </ul>
       </div>
-       <FetchCSVData 
-      csvUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe-ieEPbOt3N_kkLsZOjJJdr_uCJwe5Y74pZgQjwG39TJThxzU4lDMdx5vornMBaRK0VAEGGRwHekj/pub?gid=0&single=true&output=csv"
-      onDataFetch={handleDataFetch}
-      onError={handleError}
-         maxRedirects={5}
-    />
+       
     </aside>
   );
 }
