@@ -57,11 +57,12 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
         </div>
         <div className="p-4 space-y-4 max-h-80 overflow-y-auto">
           <FetchCSVData 
+            language={language}
       csvUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe-ieEPbOt3N_kkLsZOjJJdr_uCJwe5Y74pZgQjwG39TJThxzU4lDMdx5vornMBaRK0VAEGGRwHekj/pub?gid=0&single=true&output=csv"
       onDataFetch={handleDataFetch}
       onError={handleError}
          maxRedirects={5}
-            language
+            
     />
         </div>
       </div>
