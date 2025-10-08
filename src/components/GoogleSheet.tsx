@@ -83,7 +83,7 @@ export default function FetchCSVData({
         
       ) : (
         <div className="loading-message">Loading data...</div>
-      )}
+      )}}
    
   );
 }
