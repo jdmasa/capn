@@ -45,8 +45,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
 
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
-      setError('There was an error submitting the form. Please try again.');
-      console.error(err);
+      console.error('Form submission failed:', err);
     } finally {
       setLoading(false);
     }
