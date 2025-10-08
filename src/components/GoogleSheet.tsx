@@ -10,18 +10,14 @@ export interface FetchCSVDataProps {
   csvUrl?: string;
   onDataFetch?: (data: CSVRow[]) => void;
   onError?: (error: Error) => void;
-  maxRedirects?: number;
 }
 
 export default function FetchCSVData({
   csvUrl = 'YOUR_GOOGLE_SHEETS_CSV_URL_HERE',
   onDataFetch,
-  onError,
-  maxRedirects = 5
+  onError
 }: FetchCSVDataProps) {
   const [csvData, setCsvData] = useState<CSVRow[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchCSVData();
@@ -29,11 +25,7 @@ export default function FetchCSVData({
 
   const fetchCSVData = async () => {
     try {
-      const response = await axios.get(csvUrl, {
-        validateStatus: (status) => status >= 200 && status < 400,
-        maxRedirects,
-      });
-
+      const response = await axios.get(csvUrl);
       const parsedCsvData = parseCSV(response.data);
       setCsvData(parsedCsvData);
       
@@ -42,13 +34,10 @@ export default function FetchCSVData({
       }
     } catch (error) {
       console.error('Error fetching CSV data:', error);
-      setError(error instanceof Error ? error.message : 'Unknown error occurred');
       
       if (onError && error instanceof Error) {
         onError(error);
       }
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -67,11 +56,7 @@ export default function FetchCSVData({
 
   return (
     <div className="csv-data-container">
-      {loading ? (
-        <div className="loading-message">Loading CSV data...</div>
-      ) : error ? (
-        <div className="error-message">{error}</div>
-      ) : (
+      {csvData.length > 0 ? (
         <table className="csv-table">
           <thead>
             <tr>
@@ -90,6 +75,8 @@ export default function FetchCSVData({
             ))}
           </tbody>
         </table>
+      ) : (
+        <div className="loading-message">Loading CSV data...</div>
       )}
     </div>
   );
