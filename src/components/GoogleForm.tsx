@@ -59,12 +59,14 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
         <div className="error-message">{error}</div>
       )}
       
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label htmlFor="name">{language === 'ca' ? 'Nom' : 'Nombre'}</label>
           <input
             id="name"
             type="text"
+            className="px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+            placeholder={language === 'ca' ? 'Nom' : 'Nombre'}
             value={formData.name}
             onChange={(e) => setFormData({...formData, name: e.target.value})}
             required
@@ -72,84 +74,40 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{language === 'ca' ? 'Correu electrònic' : 'Correo electrónico'}</label>
           <input
             id="email"
             type="email"
+            className="px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+            placeholder={language === 'ca' ? 'Correu electrònic' : 'Correo electrónico'}
             value={formData.email}
             onChange={(e) => setFormData({...formData, email: e.target.value})}
             required
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
+        
+          <label htmlFor="message">{language === 'ca' ? 'Missatge' : 'Mensaje'}</label>
           <textarea
+            rows={5}
             id="message"
+            placeholder={language === 'ca' ? 'Missatge' : 'Mensaje'}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
             value={formData.message}
             onChange={(e) => setFormData({...formData, message: e.target.value})}
             required
           />
-        </div>
+        
 
-        <button type="submit" disabled={loading}>
-          {loading ? 'Submitting...' : 'Submit'}
+        <button 
+          type="submit" 
+          className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-lg transition-colors"
+          >
+          {language === 'ca' ? 'Enviar' : 'Enviar'}
         </button>
       </form>
 
-      <style jsx>{`
-        .google-form {
-          max-width: 600px;
-          padding: 20px;
-          font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        .form-group {
-          margin-bottom: 20px;
-        }
-
-        label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: 500;
-        }
-
-        input, textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 16px;
-        }
-
-        textarea {
-          height: 120px;
-          resize: vertical;
-        }
-
-        button {
-          background-color: #0066cc;
-          color: white;
-          padding: 12px 24px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 16px;
-        }
-
-        button:disabled {
-          opacity: 0.7;
-          cursor: not-allowed;
-        }
-
-        .error-message {
-          color: red;
-          margin-bottom: 16px;
-          padding: 12px;
-          background-color: #ffebee;
-          border-radius: 4px;
-        }
-      `}</style>
+      
     </div>
   );
 };
