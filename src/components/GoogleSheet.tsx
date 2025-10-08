@@ -64,8 +64,7 @@ export default function FetchCSVData({
       })
       .filter((row) => {
 
-        const dateField = Object.keys(row).find(key =>
-          key.toLowerCase().includes('date')
+        const dateField = 'date')
         );
 
         if (!dateField || !row[dateField] || row.date.length < 1) return true;
@@ -74,9 +73,7 @@ export default function FetchCSVData({
         return rowDate >= today;
       })
       .sort((a, b) => {
-        const dateField = Object.keys(a).find(key =>
-          key.toLowerCase().includes('date')
-        );
+        const dateField = 'date';
 
         if (!dateField) return 0;
 
