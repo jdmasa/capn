@@ -123,7 +123,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   <p className="text-slate-600 mb-4">{t('beginnerCourseDesc', language)}</p>
                   <div className="text-sm text-slate-500 space-y-1">
                     <div>• {language === 'ca' ? 'Durada: 8 setmanes' : 'Duración: 8 semanas'}</div>
-                    <div>• {language === 'ca' ? '2 classes/setmana' : '2 clases/semana'}</div>
+                    <div>• {language === 'ca' ? '1 classes/setmana' : '1 clases/semana'}</div>
                     <div>• {language === 'ca' ? 'Equip inclòs' : 'Equipo incluido'}</div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   <p className="text-slate-600 mb-4">{t('intermediateCourseDesc', language)}</p>
                   <div className="text-sm text-slate-500 space-y-1">
                     <div>• {language === 'ca' ? 'Durada: 12 setmanes' : 'Duración: 12 semanas'}</div>
-                    <div>• {language === 'ca' ? '3 classes/setmana' : '3 clases/semana'}</div>
+                    <div>• {language === 'ca' ? '1 classes/setmana' : '1 clases/semana'}</div>
                     <div>• {language === 'ca' ? 'Preparació competició' : 'Preparación competición'}</div>
                   </div>
                 </div>
@@ -143,7 +143,6 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   <p className="text-slate-600 mb-4">{t('advancedCourseDesc', language)}</p>
                   <div className="text-sm text-slate-500 space-y-1">
                     <div>• {language === 'ca' ? 'Entrenament personalitzat' : 'Entrenamiento personalizado'}</div>
-                    <div>• {language === 'ca' ? 'Accés il·limitat' : 'Acceso ilimitado'}</div>
                     <div>• {language === 'ca' ? 'Anàlisi tècnica' : 'Análisis técnica'}</div>
                   </div>
                 </div>
