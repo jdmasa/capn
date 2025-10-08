@@ -272,7 +272,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                 </button>
               </form>
               <GoogleForm 
-                language=language
+        language=language
         formId="1QJBKrnKPJxzRGXvay17SBbWwJBMgMZmF3h-ZPgo_umo"
         formUrl="https://docs.google.com/forms/d/e/1FAIpQLSfXm8Pwd7uHwa32N_4YO4ZJol8gOGkKZttnmuUQ8ieVCWtygQ/viewform"
       />
