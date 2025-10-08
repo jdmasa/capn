@@ -36,7 +36,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
   ];
 
   const quickLinks = [
-    { label: { ca: 'Inscripció en línia', es: 'Inscripción en línea' }, url: '#' },
+    { label: { ca: 'Inscripció en línia', es: 'Inscripción en línea' }, url: 'https://www.entitatspoble9.org/producte/tir-amb-arc/' },
     { label: { ca: 'Normes del club', es: 'Normas del club' }, url: '#' },
     { label: { ca: 'Galeria de fotos', es: 'Galería de fotos' }, url: '#' },
     { label: { ca: 'Botiga', es: 'Tienda' }, url: '#' }
