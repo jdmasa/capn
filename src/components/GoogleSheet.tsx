@@ -68,7 +68,7 @@ export default function FetchCSVData({
           key.toLowerCase().includes('date')
         );
 
-        if (!dateField || !row[dateField]) return true;
+        if (!dateField || !row[dateField] || row.date.length < 1) return true;
 
         const rowDate = new Date(row[dateField]);
         return rowDate >= today;
