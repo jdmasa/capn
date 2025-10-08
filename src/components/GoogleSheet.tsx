@@ -1,6 +1,7 @@
 // FetchCSVData.tsx
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Language } from '../types';
 
 interface CSVRow {
   [key: string]: string;
