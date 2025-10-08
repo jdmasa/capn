@@ -60,7 +60,7 @@ export default function FetchCSVData({
 
   return (
     
-
+<>
    
       {csvData.length > 0 ? (
        
@@ -84,6 +84,6 @@ export default function FetchCSVData({
       ) : (
         <div className="loading-message">Loading data...</div>
       )}
-   
+   </>
   );
 }
