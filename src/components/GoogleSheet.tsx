@@ -64,16 +64,19 @@ export default function FetchCSVData({
       })
       .filter((row) => {
 
-        const dateField = 'date')
+        const dateField = Object.keys(row).find(key =>
+          key.includes('date')
         );
 
-        if (!dateField || !row[dateField] || row.date.length < 1) return true;
+        if (!dateField || !row[dateField]) return true;
 
         const rowDate = new Date(row[dateField]);
         return rowDate >= today;
       })
       .sort((a, b) => {
-        const dateField = 'date';
+        const dateField = Object.keys(a).find(key =>
+          key.includes('date')
+        );
 
         if (!dateField) return 0;
 
