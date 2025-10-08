@@ -222,14 +222,14 @@ export default function MainContent({ language, activeSection }: MainContentProp
                     <Mail className="text-amber-600 mr-2" size={24} />
                     <h3 className="font-bold text-slate-800">{t('email', language)}</h3>
                   </div>
-                  <p className="text-slate-700">info@arquerspoblenou.cat</p>
+                  <p className="text-slate-700">info@capn.cat</p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-lg">
                   <div className="flex items-center mb-3">
                     <Phone className="text-amber-600 mr-2" size={24} />
                     <h3 className="font-bold text-slate-800">{t('phone', language)}</h3>
                   </div>
-                  <p className="text-slate-700">+34 931 234 567</p>
+                  <p className="text-slate-700">+34 609 32 67 91</p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-lg">
                   <div className="flex items-center mb-3">
