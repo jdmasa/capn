@@ -62,7 +62,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <label htmlFor="name">{language === 'ca' ? 'Nom' : 'Nombre'}</label>
+          
           <input
             id="name"
             type="text"
@@ -75,7 +75,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">{language === 'ca' ? 'Correu electrònic' : 'Correo electrónico'}</label>
+          
           <input
             id="email"
             type="email"
@@ -88,7 +88,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
         </div>
 
         
-          <label htmlFor="message">{language === 'ca' ? 'Missatge' : 'Mensaje'}</label>
+          
           <textarea
             rows={5}
             id="message"
