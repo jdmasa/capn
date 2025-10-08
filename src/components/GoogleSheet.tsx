@@ -8,10 +8,10 @@ interface CSVRow {
 }
 
 export interface FetchCSVDataProps {
+  language: Language;
   csvUrl?: string;
   onDataFetch?: (data: CSVRow[]) => void;
-  onError?: (error: Error) => void;
-  language: Language;
+  onError?: (error: Error) => void;  
 }
 
 export default function FetchCSVData({
