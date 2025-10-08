@@ -1,7 +1,7 @@
 import { Target, MapPin, BookOpen, GraduationCap, Users, Mail, Phone, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
-import { GoogleForm } from './GoogleForm';
+import GoogleForm from './components/GoogleForm';
 
 interface MainContentProps {
   language: Language;
