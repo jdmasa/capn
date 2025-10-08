@@ -42,7 +42,9 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
           }
         }
       );
-
+    // Log the status code
+    console.log('HTTP Status:', response.status);
+    console.log('HTTP Status Text:', response.statusText);
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
       console.error('Form submission failed:', err);
