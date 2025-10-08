@@ -13,7 +13,7 @@ export interface FetchCSVDataProps {
 }
 
 export default function FetchCSVData({
-  csvUrl = 'YOUR_GOOGLE_SHEETS_CSV_URL_HERE',
+  csvUrl,
   onDataFetch,
   onError
 }: FetchCSVDataProps) {
