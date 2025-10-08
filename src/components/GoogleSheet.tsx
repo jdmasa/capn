@@ -13,7 +13,7 @@ export interface FetchCSVDataProps {
 }
 
 export default function FetchCSVData({
-  csvUrl,
+  csvUrl = 'YOUR_GOOGLE_SHEETS_CSV_URL_HERE',
   onDataFetch,
   onError
 }: FetchCSVDataProps) {
@@ -55,30 +55,6 @@ export default function FetchCSVData({
   }
 
   return (
-    <div className="csv-data-container">
-      {csvData.length > 0 ? (
-        <table className="csv-table">
-          <thead>
-            <tr>
-              {Object.keys(csvData[0]).map(header => (
-                <th key={header}>{header}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {csvData.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {Object.values(row).map((value, cellIndex) => (
-                  <td key={cellIndex}>{value}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <div className="loading-message">Loading CSV data...</div>
-      )}
-    </style>
     <div className="csv-data-container">
       {csvData.length > 0 ? (
         <table className="csv-table">
