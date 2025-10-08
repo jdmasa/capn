@@ -246,31 +246,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   <p className="text-slate-700">{t('address', language)}</p>
                 </div>
               </div>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder={language === 'ca' ? 'Nom' : 'Nombre'}
-                    className="px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                  />
-                  <input
-                    type="email"
-                    placeholder={language === 'ca' ? 'Correu electrònic' : 'Correo electrónico'}
-                    className="px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                  />
-                </div>
-                <textarea
-                  rows={5}
-                  placeholder={language === 'ca' ? 'Missatge' : 'Mensaje'}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-lg transition-colors"
-                >
-                  {language === 'ca' ? 'Enviar' : 'Enviar'}
-                </button>
-              </form>
+              
               <GoogleForm 
         language={language}
         formId="1QJBKrnKPJxzRGXvay17SBbWwJBMgMZmF3h-ZPgo_umo"
