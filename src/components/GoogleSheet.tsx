@@ -78,7 +78,7 @@ export default function FetchCSVData({
                 })}
               </div>
               <div className="font-bold text-slate-800">{language === 'ca' ? row.title_ca : row.title_es}</div>
-              <div className="text-sm text-slate-600">{language === 'ca' ? row.description_ca : row.description_ca}</div>
+              <div className="text-sm text-slate-600">{language === 'ca' ? row.description_ca : row.description_es}</div>
             </div>
             
             ))}
