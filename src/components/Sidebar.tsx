@@ -61,6 +61,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
       onDataFetch={handleDataFetch}
       onError={handleError}
          maxRedirects={5}
+            language
     />
         </div>
       </div>
