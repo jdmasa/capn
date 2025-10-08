@@ -1,4 +1,4 @@
-import { Target, MapPin, BookOpen, GraduationCap, Users, Mail, Phone, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Target, MapPin, BookOpen, GraduationCap, Users, Mail, Phone, Clock, Facebook, Instagram } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
 import GoogleForm from './GoogleForm';
@@ -166,7 +166,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/p/Club-Arquers-Poblenou-100067074873620/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg hover:shadow-lg transition-all"
@@ -178,7 +178,7 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   </div>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/clubarquerspoblenou/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 bg-gradient-to-br from-pink-50 to-purple-100 p-6 rounded-lg hover:shadow-lg transition-all"
@@ -186,18 +186,6 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   <Instagram className="text-slate-600" size={48} />
                   <div>
                     <h3 className="font-bold text-slate-800">Instagram</h3>
-                    <p className="text-sm text-slate-600">@arquerspoblenou</p>
-                  </div>
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-4 bg-gradient-to-br from-sky-50 to-sky-100 p-6 rounded-lg hover:shadow-lg transition-all"
-                >
-                  <Twitter className="text-sky-600" size={48} />
-                  <div>
-                    <h3 className="font-bold text-slate-800">Twitter</h3>
                     <p className="text-sm text-slate-600">@arquerspoblenou</p>
                   </div>
                 </a>
