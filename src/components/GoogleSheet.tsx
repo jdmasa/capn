@@ -51,14 +51,41 @@ export default function FetchCSVData({
   function parseCSV(csvText: string): CSVRow[] {
     const rows = csvText.split(/\r?\n/);
     const headers = rows[0].split(',');
-    
-    return rows.slice(1).map((row) => {
-      const rowData = row.split(',');
-      return headers.reduce((obj, header, index) => ({
-        ...obj,
-        [header]: rowData[index]
-      }), {} as CSVRow);
-    });
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const parsedRows = rows.slice(1)
+      .map((row) => {
+        const rowData = row.split(',');
+        return headers.reduce((obj, header, index) => ({
+          ...obj,
+          [header]: rowData[index]
+        }), {} as CSVRow);
+      })
+      .filter((row) => {
+        // Find a date field (common names: date, Date, fecha, Fecha)
+        const dateField = Object.keys(row).find(key =>
+          key.toLowerCase().includes('date') || key.toLowerCase().includes('fecha')
+        );
+
+        if (!dateField || !row[dateField]) return true;
+
+        const rowDate = new Date(row[dateField]);
+        return rowDate >= today;
+      })
+      .sort((a, b) => {
+        const dateField = Object.keys(a).find(key =>
+          key.toLowerCase().includes('date') || key.toLowerCase().includes('fecha')
+        );
+
+        if (!dateField) return 0;
+
+        const dateA = new Date(a[dateField]);
+        const dateB = new Date(b[dateField]);
+        return dateA.getTime() - dateB.getTime();
+      });
+
+    return parsedRows;
   }
 
   return (
