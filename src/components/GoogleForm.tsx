@@ -7,6 +7,7 @@ interface FormData {
   name: string;
   email: string;
   message: string;
+  gdprConsent: boolean;
 }
 
 interface GoogleFormProps {
@@ -19,7 +20,8 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    gdprConsent: false
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -47,7 +49,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
     // Log the status code
     console.log('HTTP Status:', response.status);
     console.log('HTTP Status Text:', response.statusText);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', gdprConsent: false });
     } catch (err) {
       console.error('Form submission failed:', err);
     } finally {
@@ -99,11 +101,28 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
             onChange={(e) => setFormData({...formData, message: e.target.value})}
             required
           />
-        
 
-        <button 
-          type="submit" 
-          className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-lg transition-colors"
+
+        <div className="flex items-start gap-3">
+          <input
+            id="gdprConsent"
+            type="checkbox"
+            className="mt-1 w-4 h-4 text-amber-500 border-slate-300 rounded focus:ring-amber-500"
+            checked={formData.gdprConsent}
+            onChange={(e) => setFormData({...formData, gdprConsent: e.target.checked})}
+            required
+          />
+          <label htmlFor="gdprConsent" className="text-sm text-slate-600">
+            {language === 'ca'
+              ? "Accepto que les meves dades de contacte s'utilitzin per rebre informació sobre el club. Puc sol·licitar l'eliminació de les meves dades enviant un correu electrònic a info@capn.cat"
+              : "Acepto que mis datos de contacto se utilicen para recibir información sobre el club. Puedo solicitar la eliminación de mis datos enviando un correo electrónico a info@capn.cat"}
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={!formData.gdprConsent}
           >
           {language === 'ca' ? 'Enviar' : 'Enviar'}
         </button>

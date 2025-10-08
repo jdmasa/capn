@@ -120,6 +120,10 @@ export const translations: Record<string, Translation> = {
   followUs: {
     ca: "Segueix-nos",
     es: "Síguenos"
+  },
+  gdprConsent: {
+    ca: "Accepto que les meves dades de contacte s'utilitzin per rebre informació sobre el club. Puc sol·licitar l'eliminació de les meves dades enviant un correu electrònic a info@capn.cat",
+    es: "Acepto que mis datos de contacto se utilicen para recibir información sobre el club. Puedo solicitar la eliminación de mis datos enviando un correo electrónico a info@capn.cat"
   }
 };
 
