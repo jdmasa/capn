@@ -29,6 +29,7 @@ export default function FetchCSVData({
         maxRedirects: 5,
         validateStatus: (status) => status >= 200 && status < 400
       });
+      console.log(response);
       const parsedCsvData = parseCSV(response.data);
       setCsvData(parsedCsvData);
 
