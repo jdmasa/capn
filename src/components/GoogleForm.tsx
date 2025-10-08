@@ -75,7 +75,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
           />
         </div>
 
-        <div className="form-group">
+        
           
           <input
             id="email"
@@ -86,7 +86,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
             onChange={(e) => setFormData({...formData, email: e.target.value})}
             required
           />
-        </div>
+        
 
         
           
