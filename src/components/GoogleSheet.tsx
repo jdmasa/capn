@@ -68,7 +68,7 @@ export default function FetchCSVData({
           key.includes('date')
         );
 
-        if (!dateField || !row[dateField]) return true;
+        if (!dateField || !row[dateField] || row[dateField].trim() === '') return true;
 
         const rowDate = new Date(row[dateField]);
         return rowDate >= today;
