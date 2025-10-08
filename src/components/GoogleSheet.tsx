@@ -63,12 +63,16 @@ export default function FetchCSVData({
         }), {} as CSVRow);
       })
       .filter((row) => {
+        // Skip completely empty rows
+        const hasContent = Object.values(row).some(val => val && val.trim() !== '');
+        if (!hasContent) return false;
 
         const dateField = Object.keys(row).find(key =>
-          key.includes('date')
+          key.toLowerCase().includes('date')
         );
 
-        if (!dateField || !row[dateField]) return true;
+        // Skip rows without a date field or with empty date
+        if (!dateField || !row[dateField] || row[dateField].trim() === '') return false;
 
         const rowDate = new Date(row[dateField]);
         return rowDate >= today;
