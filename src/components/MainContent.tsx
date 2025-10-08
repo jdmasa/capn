@@ -1,6 +1,7 @@
 import { Target, MapPin, BookOpen, GraduationCap, Users, Mail, Phone, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
+import { GoogleForm } from './GoogleForm';
 
 interface MainContentProps {
   language: Language;
@@ -270,6 +271,10 @@ export default function MainContent({ language, activeSection }: MainContentProp
                   {language === 'ca' ? 'Enviar' : 'Enviar'}
                 </button>
               </form>
+              <GoogleForm 
+        formId="YOUR_FORM_ID_HERE"
+        formUrl="YOUR_FORM_URL_HERE"
+      />
             </div>
           </section>
         );
