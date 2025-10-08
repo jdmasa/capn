@@ -10,6 +10,13 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ language, onNavigate }: SidebarProps) {
+   const handleDataFetch = (data: CSVRow[]) => {
+    console.log('Received CSV data:', data);
+  };
+
+  const handleError = (error: Error) => {
+    console.error('Error fetching CSV:', error);
+  };
   const activities = [
     {
       date: '2025-10-12',
@@ -35,13 +42,7 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
     { label: { ca: 'Botiga', es: 'Tienda' }, url: '#' }
   ];
 
-  const handleDataFetch = (data: CSVRow[]) => {
-    console.log('Received CSV data:', data);
-  };
-
-  const handleError = (error: Error) => {
-    console.error('Error fetching CSV:', error);
-  };
+ 
 
   return (
     <aside className="space-y-6">
