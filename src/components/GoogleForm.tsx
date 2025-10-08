@@ -73,7 +73,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
             onChange={(e) => setFormData({...formData, name: e.target.value})}
             required
           />
-        </div>
+        
 
         
           
@@ -86,7 +86,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) =>
             onChange={(e) => setFormData({...formData, email: e.target.value})}
             required
           />
-        
+        </div>
 
         
           
