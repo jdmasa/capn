@@ -25,16 +25,19 @@ export default function FetchCSVData({
 
   const fetchCSVData = async () => {
     try {
-      const response = await axios.get(csvUrl);
+      const response = await axios.get(csvUrl, {
+        maxRedirects: 5,
+        validateStatus: (status) => status >= 200 && status < 400
+      });
       const parsedCsvData = parseCSV(response.data);
       setCsvData(parsedCsvData);
-      
+
       if (onDataFetch) {
         onDataFetch(parsedCsvData);
       }
     } catch (error) {
       console.error('Error fetching CSV data:', error);
-      
+
       if (onError && error instanceof Error) {
         onError(error);
       }
