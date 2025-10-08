@@ -272,8 +272,8 @@ export default function MainContent({ language, activeSection }: MainContentProp
                 </button>
               </form>
               <GoogleForm 
-        formId="YOUR_FORM_ID_HERE"
-        formUrl="YOUR_FORM_URL_HERE"
+        formId="1QJBKrnKPJxzRGXvay17SBbWwJBMgMZmF3h-ZPgo_umo"
+        formUrl="https://docs.google.com/forms/d/e/1FAIpQLSfXm8Pwd7uHwa32N_4YO4ZJol8gOGkKZttnmuUQ8ieVCWtygQ/viewform"
       />
             </div>
           </section>
