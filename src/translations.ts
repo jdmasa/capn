@@ -62,8 +62,8 @@ export const translations: Record<string, Translation> = {
     es: "Estamos situados en el corazón de Poblenou, Barcelona. Nuestras instalaciones cuentan con un campo de tiro exterior y cubierto, equipamiento moderno y todas las comodidades necesarias para la práctica del tiro con arco."
   },
   address: {
-    ca: "Carrer de Pujades, 123, 08005 Barcelona",
-    es: "Calle de Pujades, 123, 08005 Barcelona"
+    ca: "Carrer de Ramón Turró, 245, 08005 Barcelona",
+    es: "Calle de Ramón Turró, 245, 08005 Barcelona"
   },
   whatIsArcheryText: {
     ca: "El tir amb arc és un esport olímpic que combina concentració, força i precisió. Consisteix a disparar fletxes amb un arc cap a una diana a distàncies que varien segons la modalitat. És una disciplina accessible per a totes les edats que desenvolupa la paciència, el control mental i la coordinació. A més de ser un esport competitiu, és una excel·lent activitat per millorar la postura, la concentració i reduir l'estrès.",
