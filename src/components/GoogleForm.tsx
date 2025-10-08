@@ -34,7 +34,7 @@ const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
       formDataObject.append('entry.1126945140', formData.email); // Email field
       formDataObject.append('entry.1738991419', formData.message); // Message field
 
-      await axios.post(`https://docs.google.com/forms/d/1QJBKrnKPJxzRGXvay17SBbWwJBMgMZmF3h-ZPgo_umo/formResponse`, 
+      await axios.post(`https://docs.google.com/forms/d/${formId}/formResponse`, 
         formDataObject,
         {
           headers: {
