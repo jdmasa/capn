@@ -1,6 +1,8 @@
 import { Activity, ExternalLink } from 'lucide-react';
 import { Language } from '../types';
 import { t } from '../translations';
+import FetchCSVData from './GoogleSheet';
+
 
 interface SidebarProps {
   language: Language;
@@ -32,6 +34,14 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
     { label: { ca: 'Galeria de fotos', es: 'Galería de fotos' }, url: '#' },
     { label: { ca: 'Botiga', es: 'Tienda' }, url: '#' }
   ];
+
+  const handleDataFetch = (data: CSVRow[]) => {
+    console.log('Received CSV data:', data);
+  };
+
+  const handleError = (error: Error) => {
+    console.error('Error fetching CSV:', error);
+  };
 
   return (
     <aside className="space-y-6">
@@ -79,6 +89,12 @@ export default function Sidebar({ language, onNavigate }: SidebarProps) {
           ))}
         </ul>
       </div>
+       <FetchCSVData 
+      csvUrl="https://docs.google.com/spreadsheets/d/e/2PACX-1vRe-ieEPbOt3N_kkLsZOjJJdr_uCJwe5Y74pZgQjwG39TJThxzU4lDMdx5vornMBaRK0VAEGGRwHekj/pub?gid=0&single=true&output=csv"
+      onDataFetch={handleDataFetch}
+      onError={handleError}
+    />
+  );
     </aside>
   );
 }
