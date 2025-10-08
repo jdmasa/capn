@@ -38,7 +38,7 @@ export default function Footer({ language, onNavigate }: FooterProps) {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-amber-500" />
-                <span className="text-slate-300">info@arquerspoblenou.cat</span>
+                <span className="text-slate-300">info@capn.cat</span>
               </div>
             </div>
           </div>
