@@ -12,9 +12,10 @@ interface FormData {
 interface GoogleFormProps {
   formId: string;
   formUrl: string;
+  language: Language;
 }
 
-const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl }) => {
+const GoogleForm: React.FC<GoogleFormProps> = ({ formId, formUrl, language }) => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
