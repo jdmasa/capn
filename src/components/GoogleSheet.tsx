@@ -59,29 +59,31 @@ export default function FetchCSVData({
   }
 
   return (
-    <div className="csv-data-container">
+    
+
+   
       {csvData.length > 0 ? (
-        <table className="csv-table">
-          <thead>
-            <tr>
-              {Object.keys(csvData[0]).map(header => (
-                <th key={header}>{header}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
+       
+          
+          <div>
             {csvData.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {Object.values(row).map((value, cellIndex) => (
-                  <td key={cellIndex}>{value}</td>
-                ))}
-              </tr>
+            <div key={rowIndex} className="border-l-4 border-amber-500 pl-3 py-2 hover:bg-pink-50 transition-colors">
+              <div className="text-xs text-slate-500 font-semibold">
+                {new Date(row.date).toLocaleDateString(language === 'ca' ? 'ca-ES' : 'es-ES', {
+                  day: 'numeric',
+                  month: 'long'
+                })}
+              </div>
+              <div className="font-bold text-slate-800">{language === 'ca' ? row.title_ca : row.title_es}</div>
+              <div className="text-sm text-slate-600">{language === 'ca' ? row.description_ca : row.description_ca}</div>
+            </div>
+            
             ))}
-          </tbody>
-        </table>
+          </div>
+        
       ) : (
-        <div className="loading-message">Loading CSV data...</div>
+        <div className="loading-message">Loading data...</div>
       )}
-    </div>
+   
   );
 }
